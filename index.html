@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ислам — Гид по горам Алматы</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ff6f00;
+      color: #111;
+    }
+    header {
+      background-color: #fff;
+      color: #ff6f00;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+    nav {
+      background-color: #111;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+    }
+    nav button {
+      background-color: #ff6f00;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    nav button:hover {
+      background-color: #ff8f00;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .place {
+      margin-bottom: 15px;
+    }
+    footer {
+      background-color: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ислам — Гид по горам Алматы</h1>
+    <p>Пешие туры, приключения и ночёвки в горах</p>
+  </header>
+
+  <nav>
+    <button onclick="showPlace('kok')">Кок-Жайляу</button>
+    <button onclick="showPlace('bao')">БАО</button>
+    <button onclick="showPlace('bap')">БАП</button>
+    <button onclick="showPlace('furmanov')">Пик Фурманова</button>
+    <button onclick="showPlace('krug')">Малая кругосветка</button>
+    <button onclick="showPlace('terra')">Поляна Терра</button>
+    <button onclick="showPlace('japan')">Японская дорога</button>
+    <button onclick="showPlace('butakovka')">Бутаковка</button>
+  </nav>
+
+  <section id="content">
+    <p>Выбери маршрут выше, чтобы узнать больше.</p>
+  </section>
+
+  <section>
+    <h2>Снаряжение для походов</h2>
+    <p>Я покажу маршрут, а <a href="https://www.instagram.com/gotourist.kz" target="_blank">@gotourist.kz</a> предоставит полную экипировку.</p>
+  </section>
+
+  <footer>
+    <p>Связь: <a href="https://www.instagram.com/mori__arti" target="_blank">@mori__arti</a></p>
+    <p>&copy; 2025 Ислам — Гид по горам Алматы</p>
+  </footer>
+
+  <script>
+    const data = {
+      kok: "Кок-Жайляу — красивое плато среди гор, доступное для всех уровней подготовки.",
+      bao: "БАО — Большое Алматинское Озеро. Удивительное место с лазурной водой.",
+      bap: "БАП — Большой Алматинский Пик. Незабываемый подъём и потрясающий вид.",
+      furmanov: "Пик Фурманова — отличное место для тренировки и первых восхождений.",
+      krug: "Малая Алматинская Кругосветка — круговой маршрут с видами и реками.",
+      terra: "Поляна Терра — уединённое место с видом на горы. Отлично подходит для кемпинга.",
+      japan: "Японская дорога — тенистая тропа с интересной историей.",
+      butakovka: "Бутаковский водопад — лёгкий маршрут к живописному водопаду."
+    };
+    function showPlace(key) {
+      document.getElementById("content").innerHTML = "<p>" + data[key] + "</p>";
+    }
+  </script>
+</body>
+</html>
